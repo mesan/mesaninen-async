@@ -15,17 +15,20 @@ namespace AsyncAwaitDemo {
             InitializeComponent();
         }
 
-        private void startButton_Click(object sender, EventArgs e)
+        private async void startButton_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            textBox.Text = DoWork();
+            textBox.Text = await DoWork();
             Cursor = DefaultCursor;
         }
 
-        private string DoWork()
+        private Task<string> DoWork()
         {
-            Thread.Sleep(5000);
-            return "Await-ing more code here";
+            return Task.Run(() =>
+            {
+                Thread.Sleep(5000);
+                return "Await-ing more code here";
+            });
         }
     }
 }
