@@ -1,4 +1,4 @@
-# `async` og `await` for Mesaninen 2014
+# `async` and `await` for Mesaninen 2014
 
 Here you will find the presentation, examples, exercises and solutions for the Mesanin course on `async` and `await`.
 
@@ -33,9 +33,9 @@ Let's take our first step on the road to asynchronicity. Add the `async`-keyword
 Next step is to convert `DoWork()` into an awaitable method. Go ahead and do that. This includes spawning a new thread
 that performs the work in `DoWork()`.
 
-Hint: What does an awaitable method have to return?
+(Hint: What should an awaitable method have to return?)
 
-*Note:* Do *not* `await` the call to `DoWork()` yet. To retrieve the result string, the call should look like this:
+**Note:** Do *not* `await` the call to `DoWork()` yet. To retrieve the result string, the call should look like this:
 
     textBox.text = DoWork().Result;
 
@@ -52,7 +52,31 @@ Let's go all the way and make the code fully asynchronous. What do you have to d
 
 In this exercise we learned that:
 
-- You shouldn't use `async`/`await` for trivial operations.
+- You shouldn't necessarily use `async`/`await` for trivial operations. (There are some exceptions to this rule.)
 - The `async` keyword by itself doesn't do anything.
 - Without `async` and `await`, adding threads doesn't necessarily improve the program.
 - Awaitable methods have to return `Task` or `Task<T>`.
+
+
+## Exercise 2: Playing with Progress
+
+:warning: &ensp; **Not done yet.**
+
+## Exercise 3a: `WhenAll`
+
+Write a GUI program that loads four webpages in four `WebBrowser` components. When all the pages are done loading,
+alert the user.
+
+## Exercise 4: `WhenAny`
+
+Write a console program that connects to four different websites, retrieves each page's HTML content and reports which
+of them loads first.
+
+## Exercise 5: Exception handling
+
+:warning: &ensp; **Not done yet.**
+
+## Exercise 6: Cancellation
+
+:warning: &ensp; **Not done yet.** -- Write a cancellable task.
+
