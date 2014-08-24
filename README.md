@@ -11,7 +11,9 @@ and make it non-blocking.
 
 Start by checking out the starting step:
 
-  git checkout starthere
+    git checkout starthere
+
+Try running the program. What happens when you press the button? Can you use the textbox (or any other part of the GUI)?
 
 ### `step1`: Add a long-running method
 
@@ -31,14 +33,26 @@ Let's take our first step on the road to asynchronicity. Add the `async`-keyword
 Next step is to convert `DoWork()` into an awaitable method. Go ahead and do that. This includes spawning a new thread
 that performs the work in `DoWork()`.
 
-Hint: What does an awaitable method have to return? (Three options.)
+Hint: What does an awaitable method have to return?
 
 *Note:* Do *not* `await` the call to `DoWork()` yet. To retrieve the result string, the call should look like this:
 
-  textBox.text = DoWork().Result;
+    textBox.text = DoWork().Result;
 
 Run the program. What happens now?
 
 ### `step4`: Async awaits!
 
 Let's go all the way and make the code fully asynchronous. What do you have to do to accomplish that?
+
+(Remember to change the string in `DoWork()` to `"Async and await rocks!"` :wink:)
+
+
+### Exercise 1 in retrospect
+
+In this exercise we learned that:
+
+- You shouldn't use `async`/`await` for trivial operations.
+- The `async` keyword by itself doesn't do anything.
+- Without `async` and `await`, adding threads doesn't necessarily improve the program.
+- Awaitable methods have to return `Task` or `Task<T>`.
