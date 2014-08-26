@@ -4,6 +4,9 @@ Here you will find the presentation, examples, exercises and solutions for the M
 
 # Exercises
 
+> :exclamation: &ensp; **Note:** Exercises 1 and 2 follow a very stepwise approach. Ask if you're not sure what the 
+> exercise wants you to do, or `git checkout` the next step.
+
 ## Exercise 1: Non-blocking GUI
 
 In this exercise, you will follow a step-by-step tour of async and await. Your task is to take a blocking GUI component
@@ -15,7 +18,7 @@ Start by checking out the starting step:
 
 Try running the program. What happens when you press the button? Can you use the textbox (or any other part of the GUI)?
 
-### `step1`: Add a long-running method
+### `starthere`: Add a long-running method
 
 The first version of the code is good enough when our button just does a very simple task that can never take long to
 finish. This is important to keep in mind: `async` and `await` solve a problem, but are useless if that problem is not
@@ -24,11 +27,11 @@ present. Do not use them for simple tasks where asynchronicity is not required.
 To make this a proper example, we need `DoWork()` to take a long time. Add a simple `Thread.Sleep(5000);` to make it
 sleep for five second.
 
-### `step2`: Make `startButton_Click()` into an `async` method
+### `ex1-step1`: Make `startButton_Click()` into an `async` method
 
 Let's take our first step on the road to asynchronicity. Add the `async`-keyword to `startButton_Click()`. What happens?
 
-### `step3`: Make `DoWork()` awaitable
+### `ex1-step2`: Make `DoWork()` awaitable
 
 Next step is to convert `DoWork()` into an awaitable method. Go ahead and do that. This includes spawning a new thread
 that performs the work in `DoWork()`.
@@ -41,7 +44,7 @@ that performs the work in `DoWork()`.
 
 Run the program. What happens now?
 
-### `step4`: Async awaits!
+### `ex1-step3`: Async awaits!
 
 Let's go all the way and make the code fully asynchronous. What do you have to do to accomplish that?
 
@@ -60,7 +63,28 @@ In this exercise we learned that:
 
 ## Exercise 2: Playing with Progress
 
-:warning: &ensp; **Not done yet.**
+In this exercise we'll see how `async` makes a call non-blocking. Checkout `ex2-starthere` to get started.
+
+    git checkout ex2-starthere
+
+### `ex2-step1`: A simple progress tracker
+
+In the initial code, there is no way to see the worker progression. Add a `ReportProgress()` method that prints out a `.` every 100 ms as long as the worker is not complete. Do not add any calls to the function yet.
+
+Hints:
+
+- `Worker` has an `IsComplete` property.
+- Use `Console.Write()` instead of `Console.WriteLine()` to print the periods on a single line.
+- Remember `Thread.Sleep()`.
+
+### `ex2-step2`: 
+
+What do you think will happen if you add a call to `ReportProgress()` after `worker.DoWork()`? Try it. Were you right?
+What happened?
+
+### `ex2-step3`: 
+
+Use what you learned in exercise 1, and make the `Worker` class fully async. What happens with `ReportProgress()` now?
 
 ## Exercise 3: Returning a value
 
