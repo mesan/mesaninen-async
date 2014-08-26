@@ -15,7 +15,7 @@ namespace Exercise1 {
             InitializeComponent();
         }
 
-        private void startButton_Click(object sender, EventArgs e)
+        private async void startButton_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
             textBox.Text = DoWork();
