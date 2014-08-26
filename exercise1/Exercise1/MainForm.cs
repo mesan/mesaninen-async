@@ -24,6 +24,7 @@ namespace Exercise1 {
 
         private string DoWork()
         {
+            Thread.Sleep(3000);
             return "Await-ing more code here";
         }
     }
