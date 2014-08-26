@@ -18,7 +18,7 @@ namespace Exercise1 {
         private async void startButton_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            textBox.Text = DoWork().Result;
+            textBox.Text = await DoWork();
             Cursor = DefaultCursor;
         }
 
@@ -27,7 +27,7 @@ namespace Exercise1 {
             return Task.Run(() =>
             {
                 Thread.Sleep(3000);
-                return "Await-ing more code here";
+                return "Async and await rocks!";
             });
         }
     }
