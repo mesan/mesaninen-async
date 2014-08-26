@@ -33,7 +33,7 @@ Let's take our first step on the road to asynchronicity. Add the `async`-keyword
 Next step is to convert `DoWork()` into an awaitable method. Go ahead and do that. This includes spawning a new thread
 that performs the work in `DoWork()`.
 
-(Hint: What should an awaitable method have to return?)
+(Hint: What does an awaitable method usually return?)
 
 **Note:** Do *not* `await` the call to `DoWork()` yet. To retrieve the result string, the call should look like this:
 
@@ -55,32 +55,34 @@ In this exercise we learned that:
 - You shouldn't necessarily use `async`/`await` for trivial operations. (There are some exceptions to this rule.)
 - The `async` keyword by itself doesn't do anything.
 - Without `async` and `await`, adding threads doesn't necessarily improve the program.
-- Awaitable methods have to return `Task` or `Task<T>`.
+- Awaitable methods usually return `Task` or `Task<T>`.
 
 
 ## Exercise 2: Playing with Progress
 
 :warning: &ensp; **Not done yet.**
 
-## Exercise 3: `WhenAll`
+## Exercise 3: Returning a value
+
+## Exercise 4: `WhenAll`
 
 Write a GUI program that loads four webpages in four `WebBrowser` components. When all the pages are done loading,
 alert the user.
 
-## Exercise 4: `WhenAny`
+## Exercise 5: `WhenAny`
 
 Write a console program that connects to four different websites, retrieves each page's HTML content and reports which
 of them loads first.
 
-## Exercise 5: Exception handling
+## Exercise 6: Exception handling
 
 :warning: &ensp; **Not done yet.**
 
-## Exercise 6: `WebBrowserAsync`
+## Exercise 7: `WebBrowserAsync`
 
-Implement an `async` version of `WebBrowser`.
+Implement an `async` version of the `WebBrowser` component.
 
-## Exercise 7: Cancellation
+## Exercise 8: Cancellation
 
 :warning: &ensp; **Not done yet.** -- Write a cancellable task.
 
