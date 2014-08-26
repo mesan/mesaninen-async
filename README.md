@@ -4,7 +4,7 @@ Here you will find the presentation, examples, exercises and solutions for the M
 
 # Exercises
 
-> :exclamation: &ensp; **Note:** Exercises 1 and 2 follow a very stepwise approach. Ask if you're not sure what the 
+> :warning: &ensp; **Note:** Exercises 1 and 2 follow a very stepwise approach. Ask if you're not sure what the 
 > exercise wants you to do, or `git checkout` the next step.
 
 ## Exercise 1: Non-blocking GUI
@@ -50,7 +50,7 @@ Let's go all the way and make the code fully asynchronous. What do you have to d
 
 (Remember to change the string in `DoWork()` to `"Async and await rocks!"` :wink:)
 
-> :exclamation: &ensp; **Note:** Use `git checkout ex1-done` to see the full solution.
+> :warning: &ensp; **Note:** Use `git checkout ex1-done` to see the full solution.
 
 ### Exercise 1 in retrospect
 
@@ -88,7 +88,7 @@ What happened?
 
 Use what you learned in exercise 1, and make the `Worker` class fully async. What happens with `ReportProgress()` now?
 
-> :exclamation: &ensp; **Note:** Use `git checkout ex2-done` to see the full solution.
+> :warning: &ensp; **Note:** Use `git checkout ex2-done` to see the full solution.
 
 ## Exercise 3: `WhenAll`
 
