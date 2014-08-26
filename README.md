@@ -78,36 +78,37 @@ Hints:
 - Use `Console.Write()` instead of `Console.WriteLine()` to print the periods on a single line.
 - Remember `Thread.Sleep()`.
 
-### `ex2-step2`: 
+### `ex2-step2`: Using the progress tracker
 
 What do you think will happen if you add a call to `ReportProgress()` after `worker.DoWork()`? Try it. Were you right?
 What happened?
 
-### `ex2-step3`: 
+### `ex2-step3`: Progress tracker revisited 
 
 Use what you learned in exercise 1, and make the `Worker` class fully async. What happens with `ReportProgress()` now?
 
-## Exercise 3: Returning a value
-
-## Exercise 4: `WhenAll`
+## Exercise 3: `WhenAll`
 
 Write a GUI program that loads four webpages in four `WebBrowser` components. When all the pages are done loading,
 alert the user.
 
-## Exercise 5: `WhenAny`
+## Exercise 4: `WhenAny`
 
 Write a console program that connects to four different websites, retrieves each page's HTML content and reports which
 of them loads first.
 
-## Exercise 6: Exception handling
-
-:warning: &ensp; **Not done yet.**
-
-## Exercise 7: `WebBrowserAsync`
+## Exercise 5: `WebBrowserAsync`
 
 Implement an `async` version of the `WebBrowser` component.
 
-## Exercise 8: Cancellation
+## Exercise 6: Exception handling
+
+Make your `WebBrowserAsync` throw an exception if a page doesn't load within a given time. Create a GUI program with your `WebBrowserAsync` component, and use the thrown exception to display an error message to the user.
+
+## Exercise 7: Cancellation
 
 Run through [the official tutorial](http://msdn.microsoft.com/en-us/library/jj155759.aspx) :grinning:
 
+## Exercise 8: Cancellation in practice
+
+Implement a cancel button that stops your `WebBrowserAsync` from loading the current page.
