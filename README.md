@@ -62,7 +62,7 @@ In this exercise we learned that:
 
 :warning: &ensp; **Not done yet.**
 
-## Exercise 3a: `WhenAll`
+## Exercise 3: `WhenAll`
 
 Write a GUI program that loads four webpages in four `WebBrowser` components. When all the pages are done loading,
 alert the user.
@@ -76,7 +76,11 @@ of them loads first.
 
 :warning: &ensp; **Not done yet.**
 
-## Exercise 6: Cancellation
+## Exercise 6: `WebBrowserAsync`
+
+Implement an `async` version of `WebBrowser`.
+
+## Exercise 7: Cancellation
 
 :warning: &ensp; **Not done yet.** -- Write a cancellable task.
 
