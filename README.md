@@ -69,7 +69,8 @@ In this exercise we'll see how `async` makes a call non-blocking. Checkout `ex2-
 
 ### `ex2-step1`: A simple progress tracker
 
-In the initial code, there is no way to see the worker progression. Add a `ReportProgress()` method that prints out a `.` every 100 ms as long as the worker is not complete. Do not add any calls to the function yet.
+In the initial code, there is no way to see the worker progression. Add a `ReportProgress()` method that prints out a
+`.` every 100 ms as long as the worker is not complete. Do not add any calls to the function yet.
 
 Hints:
 
@@ -108,5 +109,5 @@ Implement an `async` version of the `WebBrowser` component.
 
 ## Exercise 8: Cancellation
 
-:warning: &ensp; **Not done yet.** -- Write a cancellable task.
+Run through [the official tutorial](http://msdn.microsoft.com/en-us/library/jj155759.aspx) :grinning:
 
