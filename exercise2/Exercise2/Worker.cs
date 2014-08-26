@@ -9,17 +9,20 @@ namespace Exercise2 {
     class Worker {
         public bool IsComplete { get; private set; }
 
-        public void DoWork()
+        public async void DoWork()
         {
             IsComplete = false;
-            LongOperation();
+            await LongOperation();
             IsComplete = true;
         }
 
-        private void LongOperation()
+        private Task LongOperation()
         {
-            Console.WriteLine("Working...");
-            Thread.Sleep(3000);
+            return Task.Run(() =>
+            {
+                Console.WriteLine("Working...");
+                Thread.Sleep(3000);
+            });
         }
     }
 }
