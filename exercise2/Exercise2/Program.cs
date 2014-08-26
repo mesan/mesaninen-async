@@ -14,6 +14,8 @@ namespace Exercise2 {
             var worker = new Worker();
             worker.DoWork();
 
+            ReportProgress();
+
             Console.WriteLine("Done");
         }
 
