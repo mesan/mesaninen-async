@@ -1,4 +1,4 @@
-﻿namespace AsyncAwaitDemo {
+﻿namespace Exercise1 {
     partial class MainWindow {
         /// <summary>
         /// Required designer variable.

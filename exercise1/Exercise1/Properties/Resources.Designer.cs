@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AsyncAwaitDemo.Properties {
+namespace Exercise1.Properties {
 
 
     /// <summary>

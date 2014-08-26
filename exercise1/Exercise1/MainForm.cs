@@ -9,26 +9,23 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AsyncAwaitDemo {
+namespace Exercise1 {
     public partial class MainWindow : Form {
         public MainWindow() {
             InitializeComponent();
         }
 
-        private async void startButton_Click(object sender, EventArgs e)
+        private void startButton_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            textBox.Text = await DoWork();
+            textBox.Text = DoWork();
             Cursor = DefaultCursor;
         }
 
-        private Task<string> DoWork()
+        private string DoWork()
         {
-            return Task.Run(() =>
-            {
-                Thread.Sleep(5000);
-                return "Await-ing more code here";
-            });
+            Thread.Sleep(5000);
+            return "Await-ing more code here";
         }
     }
 }
