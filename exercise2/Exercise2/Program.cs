@@ -19,10 +19,13 @@ namespace Exercise2 {
             Console.WriteLine("Done");
         }
 
-        private static void ReportProgress()
+        private static void ReportProgress(Worker worker)
         {
-            Console.Write('.');
-            Thread.Sleep(100);
+            while (!worker.IsComplete)
+            {
+                Console.Write('.');
+                Thread.Sleep(100);
+            }
         }
     }
 }
