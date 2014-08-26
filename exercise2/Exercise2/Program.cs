@@ -14,15 +14,18 @@ namespace Exercise2 {
             var worker = new Worker();
             worker.DoWork();
 
-            ReportProgress();
+            ReportProgress(worker);
 
             Console.WriteLine("Done");
         }
 
-        private static void ReportProgress()
+        private static void ReportProgress(Worker worker)
         {
-            Console.Write('.');
-            Thread.Sleep(100);
+            while (!worker.IsComplete)
+            {
+                Console.Write('.');
+                Thread.Sleep(100);
+            }
         }
     }
 }
