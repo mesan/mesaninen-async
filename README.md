@@ -50,6 +50,7 @@ Let's go all the way and make the code fully asynchronous. What do you have to d
 
 (Remember to change the string in `DoWork()` to `"Async and await rocks!"` :wink:)
 
+> :exclamation: &ensp; **Note:** Use `git checkout ex1-done` to see the full solution.
 
 ### Exercise 1 in retrospect
 
@@ -86,6 +87,8 @@ What happened?
 ### `ex2-step3`: Progress tracker revisited 
 
 Use what you learned in exercise 1, and make the `Worker` class fully async. What happens with `ReportProgress()` now?
+
+> :exclamation: &ensp; **Note:** Use `git checkout ex2-done` to see the full solution.
 
 ## Exercise 3: `WhenAll`
 
