@@ -90,12 +90,12 @@ Use what you learned in exercise 1, and make the `Worker` class fully async. Wha
 
 > :warning: &ensp; **Note:** Use `git checkout ex2-done` to see the full solution.
 
-## Exercise 3: `WhenAll`
+## Exercise 3: `Task.WhenAll`
 
 Write a GUI program that loads four webpages in four `WebBrowser` components. When all the pages are done loading,
 alert the user.
 
-## Exercise 4: `WhenAny`
+## Exercise 4: `Task.WhenAny`
 
 Write a console program that connects to four different websites, retrieves each page's HTML content and reports which
 of them loads first.
