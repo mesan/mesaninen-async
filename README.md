@@ -97,27 +97,33 @@ Use what you learned in exercise 1, and make the `DoWork` method fully async. Wh
 
 > :warning: &ensp; **Note:** Use `git checkout ex2-done` to see the full solution.
 
+
 ## Exercise 3: `Task.WhenAll`
 
 Write a GUI program that loads four webpages in four `WebBrowser` components. When all the pages are done loading,
 alert the user.
+
 
 ## Exercise 4: `Task.WhenAny`
 
 Write a console program that connects to four different websites, retrieves each page's HTML content and reports which
 of them loads first.
 
+
 ## Exercise 5: `WebBrowserAsync`
 
 Implement an `async` version of the `WebBrowser` component.
+
 
 ## Exercise 6: Exception handling
 
 Make your `WebBrowserAsync` throw an exception if a page doesn't load within a given time. Create a GUI program with your `WebBrowserAsync` component, and use the thrown exception to display an error message to the user.
 
+
 ## Exercise 7: Cancellation
 
 Run through [the official tutorial](http://msdn.microsoft.com/en-us/library/jj155759.aspx) :grinning:
+
 
 ## Exercise 8: Cancellation in practice
 
