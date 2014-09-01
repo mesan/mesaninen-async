@@ -86,7 +86,7 @@ What happened?
 
 ### `ex2-step3`: Progress tracker revisited 
 
-Use what you learned in exercise 1, and make the `Worker` class fully async. What happens with `ReportProgress()` now?
+Use what you learned in exercise 1, and make the `DoWork` method fully async. What happens with `ReportProgress()` now?
 
 > :warning: &ensp; **Note:** Use `git checkout ex2-done` to see the full solution.
 
