@@ -1,6 +1,6 @@
 # `async` and `await` for Mesaninen 2014
 
-Here you will find the presentation, examples, exercises and solutions for the Mesanin course on `async` and `await`.
+Here you will find the [presentation](http://github.com/lstor/presentation-async-await), examples, exercises and solutions for the Mesanin course on `async` and `await`.
 
 # Exercises
 
