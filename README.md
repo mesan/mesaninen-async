@@ -4,8 +4,15 @@ Here you will find the presentation, examples, exercises and solutions for the M
 
 # Exercises
 
+Notes about the exercises:
+
+- Each exercise should be in its own project, unless specified otherwise.
+- Feel free to pair program.
+- If you are pair programming, you can program on one computer and checkout the suggested solutions on the other.
+
 > :warning: &ensp; **Note:** Exercises 1 and 2 follow a very stepwise approach. Ask if you're not sure what the 
 > exercise wants you to do, or `git checkout` the next step.
+
 
 ## Exercise 1: Non-blocking GUI
 
