@@ -57,7 +57,7 @@ Let's go all the way and make the code fully asynchronous. What do you have to d
 
 (Remember to change the string in `DoWork()` to `"Async and await rocks!"` :wink:)
 
-> :warning: &ensp; **Note:** Use `git checkout ex1-done` to see the full solution.
+> :bulb: &ensp; **Tip:** Use `git checkout ex1-done` to see the full solution.
 
 ### Exercise 1 in retrospect
 
@@ -95,7 +95,7 @@ What happened?
 
 Use what you learned in exercise 1, and make the `DoWork` method fully async. What happens with `ReportProgress()` now?
 
-> :warning: &ensp; **Note:** Use `git checkout ex2-done` to see the full solution.
+> :bulb: &ensp; **Tip:** Use `git checkout ex2-done` to see the full solution.
 
 
 ## Exercise 3: `Task.WhenAll`
