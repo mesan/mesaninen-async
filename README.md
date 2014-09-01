@@ -114,7 +114,7 @@ of them loads first.
 
 Implement an `async` version of the `WebBrowser` component.
 
-> :warning: &ensp; **Note:** To create a custom Windows Forms component, inherit the existing `WebBrowser` component.
+> :bulb: &ensp; **Tip:** To create a custom Windows Forms component, inherit the existing `WebBrowser` component.
 > After building the solution, the custom component should be available from the Designer Toolbox in Visual Studio.
 
 
