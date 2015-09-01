@@ -1,11 +1,19 @@
-# `async` and `await` for Mesaninen 2014
 
-Here you will find the presentation, examples, exercises and solutions for the Mesanin course on `async` and `await`.
+# `async` and `await` for Mesaninen 2015
+
+Here you will find the examples, exercises and solutions for the Mesanin course on `async` and `await`.
 
 # Exercises
 
-> :exclamation: &ensp; **Note:** Exercises 1 and 2 follow a very stepwise approach. Ask if you're not sure what the 
+Notes about the exercises:
+
+- Each exercise should be in its own project, unless specified otherwise.
+- Feel free to pair program.
+- If you are pair programming, you can program on one computer and checkout the suggested solutions on the other.
+
+> :warning: &ensp; **Note:** Exercises 1 and 2 follow a very stepwise approach. Ask if you're not sure what the 
 > exercise wants you to do, or `git checkout` the next step.
+
 
 ## Exercise 1: Non-blocking GUI
 
@@ -50,6 +58,7 @@ Let's go all the way and make the code fully asynchronous. What do you have to d
 
 (Remember to change the string in `DoWork()` to `"Async and await rocks!"` :wink:)
 
+> :bulb: &ensp; **Tip:** Use `git checkout ex1-done` to see the full solution.
 
 ### Exercise 1 in retrospect
 
@@ -69,7 +78,8 @@ In this exercise we'll see how `async` makes a call non-blocking. Checkout `ex2-
 
 ### `ex2-step1`: A simple progress tracker
 
-In the initial code, there is no way to see the worker progression. Add a `ReportProgress()` method that prints out a `.` every 100 ms as long as the worker is not complete. Do not add any calls to the function yet.
+In the initial code, there is no way to see the worker progression. Add a `ReportProgress()` method to `Program.cs`
+that prints out a `.` every 100 ms as long as the worker is not complete. Do not add any calls to the function yet.
 
 Hints:
 
@@ -77,36 +87,37 @@ Hints:
 - Use `Console.Write()` instead of `Console.WriteLine()` to print the periods on a single line.
 - Remember `Thread.Sleep()`.
 
-### `ex2-step2`: 
+### `ex2-step2`: Using the progress tracker
 
 What do you think will happen if you add a call to `ReportProgress()` after `worker.DoWork()`? Try it. Were you right?
 What happened?
 
-### `ex2-step3`: 
+### `ex2-step3`: Progress tracker revisited 
 
-Use what you learned in exercise 1, and make the `Worker` class fully async. What happens with `ReportProgress()` now?
+Use what you learned in exercise 1, and make the `DoWork` method fully async. What happens with `ReportProgress()` now?
 
-## Exercise 3: Returning a value
+> :bulb: &ensp; **Tip:** Use `git checkout ex2-done` to see the full solution.
 
-## Exercise 4: `WhenAll`
 
-Write a GUI program that loads four webpages in four `WebBrowser` components. When all the pages are done loading,
-alert the user.
+## Exercise 3: `Task.WhenAll`
 
-## Exercise 5: `WhenAny`
+Write a console program that loads four webpages and returns their length. When all the pages are done loading, alert the user and report which page is the longest.
+
+> :bulb: &ensp; **Tip:** Use `HttpClient`.
+
+
+## Exercise 4: `Task.WhenAny`
 
 Write a console program that connects to four different websites, retrieves each page's HTML content and reports which
 of them loads first.
 
-## Exercise 6: Exception handling
 
-:warning: &ensp; **Not done yet.**
+## Exercise 5: Exception handling
 
-## Exercise 7: `WebBrowserAsync`
+TODO
 
-Implement an `async` version of the `WebBrowser` component.
 
-## Exercise 8: Cancellation
+## Exercise 6: Cancellation
 
-:warning: &ensp; **Not done yet.** -- Write a cancellable task.
+Run through [the official tutorial](http://msdn.microsoft.com/en-us/library/jj155759.aspx) :grinning:
 
