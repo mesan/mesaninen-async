@@ -1,6 +1,6 @@
-# `async` and `await` for Mesaninen 2014
+# `async` and `await` for Mesaninen 2015
 
-Here you will find the [presentation](http://github.com/lstor/presentation-async-await), examples, exercises and solutions for the Mesanin course on `async` and `await`.
+Here you will find the examples, exercises and solutions for the Mesanin course on `async` and `await`.
 
 # Exercises
 
@@ -100,8 +100,9 @@ Use what you learned in exercise 1, and make the `DoWork` method fully async. Wh
 
 ## Exercise 3: `Task.WhenAll`
 
-Write a GUI program that loads four webpages in four `WebBrowser` components. When all the pages are done loading,
-alert the user.
+Write a console program that loads four webpages and returns their length. When all the pages are done loading, alert the user and report which page is the longest.
+
+> :bulb: &ensp; **Tip:** Use `HttpClient`.
 
 
 ## Exercise 4: `Task.WhenAny`
@@ -110,24 +111,12 @@ Write a console program that connects to four different websites, retrieves each
 of them loads first.
 
 
-## Exercise 5: `WebBrowserAsync`
+## Exercise 5: Exception handling
 
-Implement an `async` version of the `WebBrowser` component.
-
-> :bulb: &ensp; **Tip:** To create a custom Windows Forms component, inherit the existing `WebBrowser` component.
-> After building the solution, the custom component should be available from the Designer Toolbox in Visual Studio.
+TODO
 
 
-## Exercise 6: Exception handling
-
-Make your `WebBrowserAsync` throw an exception if a page doesn't load within a given time. Create a GUI program with your `WebBrowserAsync` component, and use the thrown exception to display an error message to the user.
-
-
-## Exercise 7: Cancellation
+## Exercise 6: Cancellation
 
 Run through [the official tutorial](http://msdn.microsoft.com/en-us/library/jj155759.aspx) :grinning:
 
-
-## Exercise 8: Cancellation in practice
-
-Implement a cancel button that stops your `WebBrowserAsync` from loading the current page.
