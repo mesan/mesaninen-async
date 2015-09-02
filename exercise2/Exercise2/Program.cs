@@ -15,6 +15,7 @@ namespace Exercise2 {
             worker.DoWork();
 
             Console.WriteLine("Done");
+            Console.ReadLine();
         }
 
         private static void ReportProgress(Worker worker)
