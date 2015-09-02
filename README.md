@@ -113,7 +113,7 @@ of them loads first.
 
 ## Exercise 5: Exception handling
 
-TODO
+Extend your program from exercise 3 and 4 to handle exceptions if the webpage is not available.
 
 
 ## Exercise 6: Cancellation
