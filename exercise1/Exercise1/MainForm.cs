@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Exercise1 {
@@ -15,13 +16,10 @@ namespace Exercise1 {
             Cursor = DefaultCursor;
         }
 
-        private Task<string> DoWork()
+        private async Task<string> DoWork()
         {
-            return Task.Run(() =>
-            {
-                Thread.Sleep(3000);
-                return "Await-ing more code here";
-            });
+            Task.Delay(3000);
+            return "Await-ing more code here";
         }
     }
 }
