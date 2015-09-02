@@ -16,13 +16,10 @@ namespace Exercise2 {
             IsComplete = true;
         }
 
-        private Task LongOperation()
+        private async Task LongOperation()
         {
-            return Task.Run(() =>
-            {
-                Console.WriteLine("Working...");
-                Thread.Sleep(3000);
-            });
+            Console.WriteLine("Working...");
+            await Task.Delay(3000);
         }
     }
 }
