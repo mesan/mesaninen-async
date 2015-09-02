@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,13 +16,10 @@ namespace Exercise1 {
             Cursor = DefaultCursor;
         }
 
-        private Task<string> DoWork()
+        private async Task<string> DoWork()
         {
-            return Task.Run(() =>
-            {
-                Thread.Sleep(3000);
-                return "Async and await rocks!";
-            });
+            await Task.Delay(3000);
+            return "Async and await rocks!";
         }
     }
 }
