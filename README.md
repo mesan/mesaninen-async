@@ -32,8 +32,8 @@ The first version of the code is good enough when our button just does a very si
 finish. This is important to keep in mind: `async` and `await` solve a problem, but are useless if that problem is not
 present. Do not use them for simple tasks where asynchronicity is not required.
 
-To make this a proper example, we need `DoWork()` to take a long time. Add a simple `Thread.Sleep(5000);` to make it
-sleep for five second.
+To make this a proper example, we need `DoWork()` to take a long time. Add a simple `Thread.Sleep(3000);` to make it
+sleep for three second.
 
 ### `ex1-step1`: Make `startButton_Click()` into an `async` method
 
@@ -41,16 +41,15 @@ Let's take our first step on the road to asynchronicity. Add the `async`-keyword
 
 ### `ex1-step2`: Make `DoWork()` awaitable
 
-Next step is to convert `DoWork()` into an awaitable method. Go ahead and do that. This includes spawning a new thread
-that performs the work in `DoWork()`.
+Next step is to convert `DoWork()` into an awaitable method. Go ahead and do that. Instead of using Thread.Sleep, which is not very nice, use the async approach with `Task.Delay(3000)`.
 
 (Hint: What does an awaitable method usually return?)
 
-**Note:** Do *not* `await` the call to `DoWork()` yet. To retrieve the result string, the call should look like this:
+**Note:** Do *not* `await` the call to `DoWork()` and `Task.Delay(3000)` yet. To retrieve the result string, the call should look like this:
 
     textBox.text = DoWork().Result;
 
-Run the program. What happens now?
+Run the program. What happens now and why?
 
 ### `ex1-step3`: Async awaits!
 
@@ -64,10 +63,10 @@ Let's go all the way and make the code fully asynchronous. What do you have to d
 
 In this exercise we learned that:
 
-- You shouldn't necessarily use `async`/`await` for trivial operations. (There are some exceptions to this rule.)
+- You shouldn't necessarily use `async`/`await` for trivial operations.
 - The `async` keyword by itself doesn't do anything.
-- Without `async` and `await`, adding threads doesn't necessarily improve the program.
 - Awaitable methods usually return `Task` or `Task<T>`.
+- Beware of the natural async flow.
 
 
 ## Exercise 2: Playing with Progress

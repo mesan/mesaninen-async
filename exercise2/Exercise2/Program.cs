@@ -14,6 +14,7 @@ namespace Exercise2 {
             worker.DoWork();
 
             Console.WriteLine("Done");
+            Console.ReadLine();
         }
     }
 }
