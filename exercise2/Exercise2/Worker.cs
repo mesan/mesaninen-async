@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Threading;
+using System.Threading.Tasks;
 
 namespace Exercise2 {
     class Worker {
